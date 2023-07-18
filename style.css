@@ -133,7 +133,7 @@ header ul li a ion-icon{
 }
 
 .social li.youtube a:hover {
-    color: red;
+    color: #333;
 }
 
 .social li.linkedin a:hover {
