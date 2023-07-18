@@ -133,7 +133,7 @@ header ul li a ion-icon{
 }
 
 .social li.youtube a:hover {
-    color: #333;
+    color: red;
 }
 
 .social li.linkedin a:hover {
@@ -141,5 +141,5 @@ header ul li a ion-icon{
 }
 
 .social li a:hover {
-    color: #3b5998;
+    color: #333;
 }
