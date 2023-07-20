@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Cabin', sans-serif !important;}
-
+    
 .banner{
     position: relative;
     display: flex;
@@ -53,6 +53,7 @@ header ul li{
 }
 
 header ul li a{
+    position: sticky;
     text-decoration: none;
     font-weight: 600;
     font-size: 1.3em;
