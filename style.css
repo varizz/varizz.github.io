@@ -21,6 +21,7 @@
 }
 
 header{
+    background: #114084;
     position: absolute;
     top: 0;
     left: 0;
@@ -31,15 +32,15 @@ header{
 }
 
 header .logo{
-    color: black;
+    color: #4190ff;
     font-size: 2em;
-    font-weight: 700;
+    font-weight: 800;
     text-decoration: none;
     transition: 0.5s;
 }
 
 header .logo span{
-    color: #114084;
+    color: white;
 }
 
 header ul{
@@ -53,16 +54,16 @@ header ul li{
 
 header ul li a{
     text-decoration: none;
-    font-weight: 500;
-    font-size: 1.2em;
-    color: black;
+    font-weight: 600;
+    font-size: 1.3em;
+    color: white;
 }
 
 header ul li a ion-icon{
     position: sticky;
     top: 20px;
     font-size: 1em;
-    color: black;
+    color: white;
 }
 
 .content{
@@ -123,7 +124,7 @@ header ul li a ion-icon{
 }
 
 .content button.chat:hover{
-    background: #114084;
+    background: black;
     color: white;
 }
 
@@ -132,6 +133,7 @@ header ul li a ion-icon{
     bottom: 30px;
     display: flex;
     gap: 20px;
+    justify-content: end;
 }
 
 .social li {
@@ -202,7 +204,6 @@ header ul li a ion-icon{
     display: block;
 }
 
-.banner.night header .logo,
 .banner.night header ul li a,
 .banner.night header ul li a ion-icon,
 .banner.night .content h2,
@@ -210,4 +211,13 @@ header ul li a ion-icon{
 .banner.night .content button.chat,
 .banner.night .social li a{
     color: white;
+}
+
+.banner.night .content h2 span, .banner.night .content p{
+    color: #4190ff;
+}
+
+.banner.night .content button.chat:hover, .banner.night .content button:hover{
+    background: white;
+    color: black;
 }
