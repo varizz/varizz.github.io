@@ -13,7 +13,11 @@
     min-height: 100vh;
     padding: 100px;
     background: white;
-    transition: 0.5;
+    transition: 0.5s;
+}
+
+.banner.night{
+    background: #111111;
 }
 
 header{
@@ -31,11 +35,11 @@ header .logo{
     font-size: 2em;
     font-weight: 700;
     text-decoration: none;
-    transition: 0.5;
+    transition: 0.5s;
 }
 
 header .logo span{
-    color: blue;
+    color: #114084;
 }
 
 header ul{
@@ -72,31 +76,31 @@ header ul li a ion-icon{
     font-size: 2em;
     color: black;
     font-weight: 200;
-    transform: 0.5;
+    transform: 0.5s;
 }
 
 .content h2{
     font-size: 4.3em;
     color: black;
     font-weight: 700;
-    transform: 0.5;
+    transform: 0.5s;
 }
 
 
 .content h2 span{
-    color: blue;
+    color: #114084;
 }
 
 .content p{
     font-size: 1.6em;
-    color: navy;
+    color: #114084;
     margin: 10px 0;
-    transition: 0.5;
+    transition: 0.5s;
 }
 
 .content button{
     position: relative;
-    background: rgb(68, 0, 255);
+    background: #114084;
     color: white;
     border: none;
     outline: none;
@@ -110,9 +114,17 @@ header ul li a ion-icon{
     transition: 0.5s;
 }
 
+.content button:hover{
+    background: black;
+}
 .content button.chat{
     background: transparent;
     color: #333;
+}
+
+.content button.chat:hover{
+    background: #114084;
+    color: white;
 }
 
 .social {
@@ -142,4 +154,60 @@ header ul li a ion-icon{
 
 .social li a:hover {
     color: #333;
+}
+
+.dayNight{
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    color: #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 2em;
+}
+
+.banner .dayNight{
+    background-color: #cccccc;
+    color: black;
+}
+
+.banner .dayNight:hover{
+    background-color: #222222;
+    color: white;
+}
+
+.banner.night .dayNight{
+    background-color: #222222;
+    color: white;
+}
+
+.banner.night .dayNight:hover{
+    background-color: #cccccc;
+    color: black;
+}
+
+.dayNight ion-icon:nth-child(2),.banner.night .dayNight ion-icon:nth-child(1){
+    display: none;
+}
+
+.banner.night .dayNight ion-icon:nth-child(2){
+    display: block;
+}
+
+.banner.night header .logo,
+.banner.night header ul li a,
+.banner.night header ul li a ion-icon,
+.banner.night .content h2,
+.banner.night .content h3,
+.banner.night .content button.chat,
+.banner.night .social li a{
+    color: white;
 }

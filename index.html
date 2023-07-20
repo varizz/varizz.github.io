@@ -27,8 +27,19 @@
             <li class="linkedin"><a href="https://www.linkedin.com/in/vadel-rizky/" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-linkedin"></ion-icon></a></li>
             <li class="youtube"><a href="https://www.youtube.com/channel/UCCJn12AxTUjwLmo2o5Zs85A?sub_confirmation=1" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-youtube"></ion-icon></a></li>
         </ul>
+        <div class="dayNight">
+            <ion-icon name="sunny-outline"></ion-icon>
+            <ion-icon name="moon-outline"></ion-icon>
+        </div>
         </section>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script>
+            let banner = document.querySelector('.banner');
+            let dayNight = document.querySelector('.dayNight');
+            dayNight.onclick = function(){
+                banner.classList.toggle('night')
+            }
+        </script>
     </body>
 </html>
