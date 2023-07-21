@@ -4,7 +4,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Cabin', sans-serif !important;}
-    
+
+html {
+    scroll-behavior: smooth;
+}
+
 .banner{
     position: relative;
     display: flex;
@@ -20,7 +24,7 @@
     background: #111111;
 }
 
-header{
+nav{
     background: #114084;
     position: absolute;
     top: 0;
@@ -31,7 +35,7 @@ header{
     justify-content: space-between;
 }
 
-header .logo{
+nav .logo{
     color: #4190ff;
     font-size: 2em;
     font-weight: 800;
@@ -39,31 +43,24 @@ header .logo{
     transition: 0.5s;
 }
 
-header .logo span{
+nav .logo span{
     color: white;
 }
 
-header ul{
+nav ul{
     display: flex;
     gap: 40px;
 }
 
-header ul li{
+nav ul li{
     list-style: none;
 }
 
-header ul li a{
-    position: sticky;
+nav ul li a{
+    display: block;
     text-decoration: none;
     font-weight: 600;
     font-size: 1.3em;
-    color: white;
-}
-
-header ul li a ion-icon{
-    position: sticky;
-    top: 20px;
-    font-size: 1em;
     color: white;
 }
 
@@ -71,7 +68,6 @@ header ul li a ion-icon{
     position: relative;
     max-width: 700px;
     z-index: 10;
-
 }
 
 .content h3{
@@ -177,6 +173,24 @@ header ul li a ion-icon{
     font-size: 2em;
 }
 
+.darkMode{
+    color: black;
+    position: absolute;
+    bottom :1.5em;
+    right: 28%;
+    display: flex;
+    gap: 10px;
+    justify-content: start;
+    font-size: 1.7em;
+    transition: 0.5s;
+}
+
+.darkMode a ion-icon{
+    position: absolute;
+    bottom: 0.001px;
+    right: 105%;
+}
+
 .banner .dayNight{
     background-color: #cccccc;
     color: black;
@@ -185,6 +199,33 @@ header ul li a ion-icon{
 .banner .dayNight:hover{
     background-color: #222222;
     color: white;
+}
+
+.banner.night .darkMode{
+    color: white;
+    position: absolute;
+    text-align: start;
+    bottom :1.5em;
+    right: 28%;
+    display: flex;
+    gap: 10px;
+    justify-content: start;
+    font-size: 1.7em;
+}
+
+
+.banner.night .darkMode a ion-icon{
+    position: absolute;
+    bottom: 0.001px;
+    right: 101%;
+}
+
+.darkMode a:nth-child(2), .banner.night .darkMode a:nth-child(1){
+    display: none;
+}
+
+.banner.night .darkMode a:nth-child(2){
+    display: block;
 }
 
 .banner.night .dayNight{
@@ -212,7 +253,7 @@ header ul li a ion-icon{
 .banner.night .content button.chat,
 .banner.night .social li a{
     color: white;
-}
+} 
 
 .banner.night .content h2 span, .banner.night .content p{
     color: #4190ff;
@@ -221,4 +262,9 @@ header ul li a ion-icon{
 .banner.night .content button.chat:hover, .banner.night .content button:hover{
     background: white;
     color: black;
+}
+
+#top,#middle,#bottom{
+    height: 600px;
+    background: green; 
 }
