@@ -9,6 +9,19 @@ html {
     scroll-behavior: smooth;
 }
 
+
+@property --myColor1 {
+    syntax: '<color>';
+    initial-value: #aef0ff;
+    inherits: false;
+  }
+  
+  @property --myColor2 {
+    syntax: '<color>';
+    initial-value: #53b8eb;
+    inherits: false;
+  }
+
 .banner{
     position: relative;
     display: flex;
@@ -16,12 +29,13 @@ html {
     align-items: center;
     min-height: 100vh;
     padding: 100px;
-    background: white;
-    transition: 0.5s;
+    background: linear-gradient(99deg, var(--myColor1), var(--myColor2)110%);
+    transition: --myColor1 0.5s, --myColor2 0.5s;
 }
 
 .banner.night{
-    background: #111111;
+    --myColor1 :rgba(7,7,9,1);
+    --myColor2 :rgba(27,24,113,1);
 }
 
 nav{
@@ -109,11 +123,11 @@ nav ul li a{
     border-radius: 4px;
     font-weight: 600;
     cursor: pointer;
-    transition: 0.5s;
+    transition:0.5s;
 }
 
 .content button:hover{
-    background: black;
+    background: white;
 }
 .content button.chat{
     background: transparent;
@@ -173,24 +187,6 @@ nav ul li a{
     font-size: 2em;
 }
 
-.darkMode{
-    color: black;
-    position: absolute;
-    bottom :1.5em;
-    right: 28%;
-    display: flex;
-    gap: 10px;
-    justify-content: start;
-    font-size: 1.7em;
-    transition: 0.5s;
-}
-
-.darkMode a ion-icon{
-    position: absolute;
-    bottom: 0.001px;
-    right: 105%;
-}
-
 .banner .dayNight{
     background-color: #cccccc;
     color: black;
@@ -199,33 +195,6 @@ nav ul li a{
 .banner .dayNight:hover{
     background-color: #222222;
     color: white;
-}
-
-.banner.night .darkMode{
-    color: white;
-    position: absolute;
-    text-align: start;
-    bottom :1.5em;
-    right: 28%;
-    display: flex;
-    gap: 10px;
-    justify-content: start;
-    font-size: 1.7em;
-}
-
-
-.banner.night .darkMode a ion-icon{
-    position: absolute;
-    bottom: 0.001px;
-    right: 101%;
-}
-
-.darkMode a:nth-child(2), .banner.night .darkMode a:nth-child(1){
-    display: none;
-}
-
-.banner.night .darkMode a:nth-child(2){
-    display: block;
 }
 
 .banner.night .dayNight{
@@ -264,7 +233,14 @@ nav ul li a{
     color: black;
 }
 
-#top,#middle,#bottom{
-    height: 600px;
-    background: green; 
+.banner.night .social li.youtube a:hover {
+    color: red;
+}
+
+.banner.night .social li.linkedin a:hover {
+    color: #0a66c2;
+}
+
+.banner.night .social li a:hover {
+    color: #333;
 }
