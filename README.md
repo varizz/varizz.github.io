@@ -1,5 +1,5 @@
 # Welcome
-This repod is just my attempt to create a Portfolio Website
+This repo is just my attempt to create a Portfolio Website
 
 # Why?
 Just writing this code when I'm bored, you can Fork this Repo if you want
