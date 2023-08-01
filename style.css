@@ -127,16 +127,12 @@ nav ul li a{
 }
 
 .content button:hover{
-    background: white;
+    background: black;
+    color: white;
 }
 .content button.chat{
     background: transparent;
     color: #333;
-}
-
-.content button.chat:hover{
-    background: black;
-    color: white;
 }
 
 .social {
