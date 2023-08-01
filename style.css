@@ -126,7 +126,7 @@ nav ul li a{
     transition:0.5s;
 }
 
-.content button:hover{
+.content button:hover, .content button.chat:hover{
     background: black;
     color: white;
 }
