@@ -136,6 +136,13 @@ nav ul li a{
     color: #333;
 }
 
+.guy{
+    position: absolute;
+    right: 10%;
+    top: 20%;
+    max-width: 320px;
+}
+
 .social {
     position: absolute;
     bottom: 30px;
