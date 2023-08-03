@@ -127,6 +127,7 @@ nav ul li a{
 }
 
 .content button:hover, .content button.chat:hover{
+    transform: scale(0.9);
     background: black;
     color: white;
 }
@@ -151,6 +152,7 @@ nav ul li a{
     text-decoration: none;
     font-size: 1.75em;
     color: black;
+    transition: 0.3s;
 }
 
 .social li.youtube a:hover {
