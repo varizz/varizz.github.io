@@ -16,13 +16,13 @@ html {
     inherits: false;
   }
   
-  @property --myColor2 {
+@property --myColor2 {
     syntax: '<color>';
     initial-value: #53b8eb;
     inherits: false;
   }
 
-.banner{
+body{
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -33,6 +33,15 @@ html {
     transition: --myColor1 0.5s, --myColor2 0.5s;
 }
 
+#home{
+    width: 100%;
+    height:85vh;
+    background-image: url(img/icon-guy.png);
+    background-size: 20rem;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
 .banner.night{
     --myColor1 :rgba(7,7,9,1);
     --myColor2 :rgba(27,24,113,1);
@@ -40,7 +49,8 @@ html {
 
 nav{
     background: #114084;
-    position: absolute;
+    position: fixed;
+    z-index: 10000;
     top: 0;
     left: 0;
     width: 100%;
@@ -55,6 +65,7 @@ nav .logo{
     font-weight: 800;
     text-decoration: none;
     transition: 0.5s;
+    pointer-events: none;
 }
 
 nav .logo span{
@@ -71,14 +82,31 @@ nav ul li{
 }
 
 nav ul li a{
-    display: block;
+    position: relative;
+    top: 5px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: white;
 }
 
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.2s;
+}
+
+nav ul li a:hover::after{
+    width: 106%;
+}
+
 .content{
+    top: 10vh;
     position: relative;
     max-width: 700px;
     z-index: 10;
@@ -136,23 +164,44 @@ nav ul li a{
     color: #333;
 }
 
-.guy{
+#about{
     position: absolute;
-    right: 10%;
-    top: 20%;
-    max-width: 320px;
+    bottom: 0px;
+    padding: 80px 0;
+    color: black;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .social {
-    position: absolute;
-    bottom: 30px;
+    position: relative;
+    left: 5rem;
     display: flex;
-    gap: 20px;
-    justify-content: end;
+    align-self: start;
+    justify-content: start;
+    margin: 1rem 0 3rem 0;
 }
 
 .social li {
     list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
 }
 
 .social li a {
@@ -160,6 +209,7 @@ nav ul li a{
     font-size: 1.75em;
     color: black;
     transition: 0.3s;
+    width: 35px;
 }
 
 .social li.youtube a:hover {
@@ -175,7 +225,7 @@ nav ul li a{
 }
 
 .dayNight{
-    position: absolute;
+    position: fixed;
     bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
