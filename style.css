@@ -30,6 +30,7 @@ body{
     min-height: 100vh;
     padding: 100px;
     background: linear-gradient(99deg, var(--myColor1), var(--myColor2)110%);
+    background-attachment: fixed;
     transition: --myColor1 0.5s, --myColor2 0.5s;
 }
 
@@ -164,19 +165,13 @@ nav ul li a:hover::after{
     color: #333;
 }
 
-#about{
-    position: absolute;
-    bottom: 0px;
-    padding: 80px 0;
-    color: black;
-}
-
 footer {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     width: 100%;
+    margin:auto;
 }
 
 .footer-content{
@@ -192,7 +187,6 @@ footer {
     left: 5rem;
     display: flex;
     align-self: start;
-    justify-content: start;
     margin: 1rem 0 3rem 0;
 }
 
@@ -240,6 +234,7 @@ footer {
     cursor: pointer;
     transition: 0.5s;
     font-size: 2em;
+    z-index: 1001;
 }
 
 .banner .dayNight{
@@ -298,4 +293,31 @@ footer {
 
 .banner.night .social li a:hover {
     color: #333;
+}
+
+/* view for mobile device */
+
+@media only screen and (max-width:990px) {
+    #home{
+        background-image: none;}
+
+    body{
+        padding: 10px;}
+    
+    .content h3{
+        font-size: 50px;
+        font-weight: 700;
+    }    
+
+    .content h2{
+        font-size: 50px;
+        font-weight: 600;
+    }
+    
+    .content p{
+        font-size: 20px;
+        font-weight: 700;
+    }
+    
+
 }
