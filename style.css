@@ -298,7 +298,7 @@ nav ul li a:hover::after{
 }
 
 /* view for mobile device */
-
+/* 990 */
 @media only screen and (max-width:990px) {
     #content{
         background-image: none;}
@@ -314,48 +314,51 @@ nav ul li a:hover::after{
         padding: 20px 20px;
     }    
     
+    nav .logo{
+        font-size: 25px;
+    }
+
     nav ion-icon{
         display: none;
     }
     
     nav ion-icon[name="menu-outline"]{
+        font-size: 1em;
         display: block;
     }
 
     nav ul{
+        border-radius: 0 0 0 40px ;
         background: #114084;
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 50vh;
-        padding-top: 50px;
-        transition: all 0.5s ease;
+        position: absolute;
+        top: 65px;
+        right: -120px;
+        width: 120px;
+        height: 210px;
+        transition: 0.8s;
     }
 
     nav ul li{
-        margin: 33px;
+        padding-right: 0;
+        margin: 23px;
         display: block;
-    }
-
-    #check:checked ~ nav ul{
-        right: 0;
+        text-align: start;
     }
 
     .content h3{
         padding-top: 60px;
-        font-size: 35px;
-        font-weight: 700;
+        font-size: 30px;
+        font-weight: 800;
     }    
 
     .content h2{
-        font-size: 40px;
+        font-size: 30px;
         font-weight: 600;
     }
     
     .content p{
         font-size: 20px;
-        font-weight: 700;
+        font-weight: 600;
     }
     
 
