@@ -657,8 +657,8 @@ form input, form textarea{
         margin-bottom: 7vw;
     }
 
-    .intro{
-        width: 100vw;
+    .content .intro{
+        max-width: 50vw;
     }
 
     .about{
