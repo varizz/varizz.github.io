@@ -1,0 +1,707 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif !important;}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+@property --myColor1 {
+    syntax: '<color>';
+    initial-value: #aef0ff;
+    inherits: false;
+  }
+  
+@property --myColor2 {
+    syntax: '<color>';
+    initial-value: #53b8eb;
+    inherits: false;
+  }
+
+body{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px;
+    background: linear-gradient(99deg, var(--myColor1), var(--myColor2)110%);
+    background-attachment: fixed;
+    transition: --myColor1 0.5s, --myColor2 0.5s;
+}
+
+.banner.night{
+    --myColor1 :rgba(7,7,9,1);
+    --myColor2 :rgba(27,24,113,1);
+}
+
+nav{
+    background: #114084;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menubtn{
+    font-size: 35px;
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+
+#check{
+    display: none;
+}
+
+nav .logo{
+    color: #4190ff;
+    font-size: 2em;
+    font-weight: 800;
+    text-decoration: none;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+nav .logo span{
+    color: white;
+}
+
+nav ion-icon{
+    top: 20px;
+    font-size: 25px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 5px 22px;
+}
+
+nav ul li a{
+    position: relative;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: white;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 4px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 103%;
+}
+
+#home, #about{
+    width: 85vw;
+    height: 105vh;
+    scroll-margin-top: 17vh;
+}
+
+#project{
+    width: 85vw;
+    height: 105vh;
+    scroll-margin-top: 15vh;
+}
+
+#contact{
+    height: 105vh;
+    scroll-margin-top: 18vh;
+}
+
+.image img{
+    width: 10rem;
+    margin-right: 10vw;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+}
+
+.name{
+    flex-basis: 100%;
+}
+
+h1{
+    font-size: 2em;
+    color: black;
+    font-weight: 800;
+    transition: 0.5s;
+}
+
+h2{
+    font-size: 4em;
+    color: black;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+h3{
+    font-size: 2em;
+    color: black;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+h2 span{
+    color: #114084;
+    transition: 0.5s;
+}
+
+p{
+    font-size: 1.6em;
+    color: #114084;
+    margin: 20px 0;
+    transition: 0.5s;
+}
+
+.content button{
+    position: relative;
+    background: #114084;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 15px 35px;
+    font-size: 1.3em;
+    letter-spacing: 0.05em;
+    margin-right: 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:0.5s;
+}
+
+.content button:hover, .content button.chat:hover{
+    transform: scale(0.9);
+    background: black;
+    color: white;
+}
+.content button.chat{
+    background: transparent;
+    color: #333;
+}
+
+.content .intro{
+    max-width: 40vw;
+    text-align: justify;
+}
+
+.about .intro{
+    width: 50%;
+    float: left;
+    padding: 0 5vw 0 0;
+    text-align: justify;
+}
+
+.wave {
+    animation-name: wave-animation;  
+    animation-duration: 2.5s;        
+    animation-iteration-count: infinite; 
+    transform-origin: 70% 70%;
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) } 
+    100% { transform: rotate( 0.0deg) }
+  }
+  
+.skills{
+    width: 50%;
+    float: left;
+    max-height: 400px;
+    width: 37vw;
+    padding: 0 0 40px 40px;
+}
+
+.skills .progress-box{
+    width: 100%;
+    margin: 0 0 0 20px;
+
+}
+
+.meta{
+    display: flex;
+}
+
+.progress-box .skill-title{
+    flex-basis: 50%;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #114084;
+    transition: 0.5s;
+    margin-bottom: 0.5vw;
+}
+
+.progress-box .item-value{
+    flex-basis: 50%;
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #114084;
+    transition: 0.5s;
+}
+
+.progress-box .progress-bg{
+    height: 20px;
+    width: 100%;
+    background-color: rgb(200, 200, 200);
+    border-radius: 10px;
+    margin-bottom: 1vw;
+}
+
+@keyframes progress{
+    0%{
+        width: 0;
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.html-bg{
+    background-color: #114084;
+    height: 20px;
+    width: 80%;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.css-bg{
+    background-color: #114084;
+    height: 20px;
+    width: 70%;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.bootstrap-bg{
+    background-color: #114084;
+    height: 20px;
+    width: 50%;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.python-bg{
+    background-color: #114084;
+    height: 20px;
+    width: 55%;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.django-bg{
+    background-color: #114084;
+    height: 20px;
+    width: 30%;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 4vw;
+    transition: 0.5s;
+}
+
+.work{
+    width: 42vw;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.work img{
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(#0a66c241,#0a66c2);
+    border-radius: 15px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    transition: height 0.7s;
+}
+
+.layer h3, .layer p{
+    color: white ;
+}
+
+.work:hover img{
+    transform: scale(1.1)
+}
+
+.work:hover .layer{
+    height: 100% ;
+}
+
+.row{
+    display: flex;
+}
+
+.contact-left{
+    flex-basis: 50%;
+}
+
+.contact-right{
+    flex-basis: 65%;
+}
+
+.submit-btn{
+    display: inline-block;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    float: left;
+    border: 0;
+    outline: none;
+    background: white;
+    padding: 15px;
+    margin: 15px 0;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+.contact-left h1{
+    font-size: 4em;
+    font-weight: 700;
+}
+
+.contact-left p{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.contact-left span{
+    color :#114084;
+    transition: 1s;
+}
+
+.copyright{
+    background: #114084;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 0 0 6vw;
+}
+
+.copyright p.copy{
+    width: 40%;
+    font-size: 1.2em;
+    color:white;
+}
+
+.copyright p.copy a{
+    font-size: 1em;
+    font-weight: 700;
+    color:white;
+    text-decoration: none;
+}
+
+.social {
+    bottom: 0;
+    display: flex;
+    padding: 25px 0;
+    list-style: none;
+    z-index: 90;
+}
+
+.social li {
+    display: inline;
+    list-style: none;
+    margin: 0 10px;
+}
+
+.social li a {
+    font-size: 1.75em;
+    color: black;
+    transition: 0.3s;
+}
+
+.social li.youtube a:hover {
+    color: red;
+}
+
+.social li.linkedin a:hover {
+    color: #0a66c2;
+}
+
+.social li a:hover {
+    color: #333;
+}
+
+.dayNight{
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    color: #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 2em;
+    z-index: 1001;
+}
+
+.banner .work img:nth-child(2), .banner.night .work img:nth-child(1){
+    display: none;
+}
+
+.banner.night .work img:nth-child(2){
+    display: block;
+}
+
+.banner .dayNight{
+    background-color: #cccccc;
+    color: black;
+}
+
+.banner .dayNight:hover{
+    background-color: #222222;
+    color: white;
+}
+
+.banner.night .dayNight{
+    background-color: #222222;
+    color: white;
+}
+
+.banner.night .dayNight:hover{
+    background-color: #cccccc;
+    color: black;
+}
+
+.dayNight ion-icon:nth-child(2),.banner.night .dayNight ion-icon:nth-child(1){
+    display: none;
+}
+
+.banner.night .dayNight ion-icon:nth-child(2){
+    display: block;
+}
+
+.banner.night header ul li a,
+.banner.night header ul li a ion-icon,
+.banner.night h1,
+.banner.night h2,
+.banner.night h3,
+.banner.night .content button.chat,
+.banner.night .social li a,
+.banner.night .layer h3, .banner.night .layer p, .banner.night .copyright p.copy{
+    color: white;
+} 
+
+.banner.night h2 span, .banner.night p, .banner.night .skill-title, .banner.night .item-value, .banner.night .contact-left span{
+    color: #4190ff;
+}
+
+.banner.night .html-bg, .banner.night .css-bg, .banner.night .bootstrap-bg, .banner.night .python-bg, .banner.night .django-bg{
+    background-color: #4190ff;
+}
+
+.banner.night .content button.chat:hover, .banner.night .content button:hover{
+    background: white;
+    color: black;
+}
+
+.banner.night .social li.youtube a:hover {
+    color: red;
+}
+
+.banner.night .social li.linkedin a:hover {
+    color: #0a66c2;
+}
+
+.banner.night .social li a:hover {
+    color: #333;
+}
+
+/* view for mobile device */
+/* 990 */
+@media only screen and (max-width:990px) {
+    .image img{
+        margin-top: 10vh;
+        width: 7rem;
+        margin-right: 0;
+    }
+    
+    #about{
+        scroll-margin-top: 16vw;
+    }
+
+    #contact{
+        height: 110vh;
+    }
+
+    body{
+        padding: 40px;}
+    
+    h3{
+        padding-top: 60px;
+        font-size: 30px;
+        font-weight: 800;
+    }    
+
+    h2{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    
+    p{
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    p.copy{
+        font-weight: inherit;
+    }
+
+    .menubtn{
+        display: block;
+    }    
+
+    nav{
+        padding: 20px 20px;
+    }    
+    
+    nav .logo{
+        font-size: 25px;
+    }
+
+    nav ion-icon{
+        display: none;
+    }
+    
+    nav ion-icon[name="menu-sharp"]{
+        font-size: 1em;
+        display: block;
+    }
+
+    nav ul{
+        border-radius: 0 0 0 40px ;
+        background: #114084;
+        position: absolute;
+        top: 65px;
+        right: -120px;
+        width: 120px;
+        height: 210px;
+        transition: 0.8s;
+    }
+
+    nav ul li{
+        padding-right: 0;
+        margin: 23px;
+        display: block;
+        text-align: start;
+    }
+
+    .content button{
+        size: 10px;
+    }
+
+    .content{
+        margin-bottom: 7vw;
+    }
+
+    .intro{
+        width: 100vw;
+    }
+
+    .about{
+        max-height: 200vh;
+    }
+
+    .progress-box .progress-bg, .html-bg, .css-bg, .bootstrap-bg, .python-bg, .django-bg{
+        height: 10px;
+    }
+
+    .skills{
+        margin-bottom: 7vw;
+    }    
+    
+    .work{
+        width: 100%;
+    }
+
+    form input, form textarea{
+        padding: 5px;
+        margin: 15px 0;
+        color: #114084;
+        font-size: 18px;
+        border-radius: 6px;
+    }
+    
+    .contact-left h1{
+        font-size: 2em;
+    }
+    
+    .contact-left p{
+        font-size: 1.05em;
+        font-weight: 600;
+    }
+    
+    .contact-right{
+        margin-left: 2vw;
+        flex-basis: 50%;
+    }
+
+    .social{
+        margin-top: 10vh;
+    }
+}
