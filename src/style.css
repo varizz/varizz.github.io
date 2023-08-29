@@ -481,6 +481,8 @@ form input, form textarea{
     color: #333;
 }
 
+/* DARKMODE */
+
 .dayNight{
     position: fixed;
     bottom: 25px;
@@ -580,17 +582,13 @@ form input, form textarea{
         width: 7rem;
         margin-right: 0;
     }
-    
-    #about{
-        scroll-margin-top: 16vw;
-    }
 
     #contact{
         height: 110vh;
     }
 
     body{
-        padding: 40px;}
+        padding: 5vw;}
     
     h3{
         padding-top: 60px;
@@ -671,9 +669,20 @@ form input, form textarea{
         height: 10px;
     }
 
+    .about .intro{
+        width: 110%;
+        float: none;
+    }
+
     .skills{
-        margin-bottom: 7vw;
+        padding: 0;
+        width: 104%;
+        float: none;
     }    
+
+    .skills .progress-box{
+        margin: 0 0 0 0;
+    }
     
     .work{
         width: 100%;
@@ -686,22 +695,31 @@ form input, form textarea{
         font-size: 18px;
         border-radius: 6px;
     }
+
+    .row{
+        display: inline-block;
+    }
+
+    .contact-right{
+        margin: 0;
+    }
     
+
     .contact-left h1{
         font-size: 2em;
     }
     
     .contact-left p{
-        font-size: 1.05em;
+        font-size: 1.5em;
         font-weight: 600;
     }
-    
-    .contact-right{
-        margin-left: 2vw;
-        flex-basis: 50%;
+
+    input{
+        margin: 0;
     }
 
     .social{
-        margin-top: 10vh;
+        padding: 0;
+        float: right;
     }
 }
