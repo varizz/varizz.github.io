@@ -688,6 +688,10 @@ form input, form textarea{
         width: 100%;
     }
 
+    .layer h3, .layer p{
+        padding: 0;
+    }
+
     form input, form textarea{
         padding: 5px;
         margin: 15px 0;

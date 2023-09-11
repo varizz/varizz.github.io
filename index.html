@@ -125,11 +125,11 @@
                         </div>
                     </div>
                     <div class="contact-right">
-                        <form>
-                            <input type="text" name="Name" placeholder="Your Name" required oninvalid="InvalidMsg(this);">
-                            <input type="text" name="Email" placeholder="Your Email">
-                            <textarea maxlength="400" name="Message" rows="5" placeholder="Your Message"></textarea>
-                            <button type="submit" class="submit-btn">Submit</button>
+                        <form name="my-form" method="post">
+                            <input type="name" name="Name" placeholder="Your Name" required oninvalid="InvalidMsg(this);">
+                            <input type="email" name="Email" placeholder="Your Email" required oninvalid="InvalidMsg(this);">
+                            <textarea maxlength="200" name="Message" rows="5" placeholder="Your Message" required oninvalid="InvalidMsg(this);"></textarea>
+                            <button id="myButton" type="submit" class="submit-btn">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -143,6 +143,21 @@
             </div>             
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script>const scriptURL = 'https://script.google.com/macros/s/AKfycbyzCimtoM3hKiphn4Ng4g7ei3tzCXa-2R8dhcqf8A9VhmECN2rpt-cH2HN2HNHZvvk3/exec';
+            const form = document.forms['my-form'];
+            
+            form.addEventListener('submit', e => {
+              e.preventDefault();
+              const submitButton = form.querySelector('button[type="submit"]');
+              submitButton.disabled = true;
+              fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                  alert("Thanks for Contacting us..! We Will Contact You Soon...");
+                  location.reload();
+                })
+                .catch(error => console.error('Error!', error.message));
+            });
+            </script>
         <script type="text/javascript" src="src/js/darkmode.js"></script>
         <script type="text/javascript" src="src/js/navbar.js"></script>
         <script type="text/javascript" src="src/js/progress-bar.js"></script>
